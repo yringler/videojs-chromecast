@@ -11,7 +11,7 @@ var path = require('path'),
 
 module.exports = function(grunt) {
 
-   var DEBUG = !!grunt.option('debug'),
+   var DEBUG = false,
        config;
 
    config = {
@@ -87,11 +87,11 @@ module.exports = function(grunt) {
             },
             options: {
                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> <%= versionInfo %> */\n',
-               sourceMap: DEBUG,
-               sourceMapIncludeSources: DEBUG,
-               mangle: DEBUG,
-               compress: DEBUG,
-               beautify: !DEBUG,
+               sourceMap: false,
+               sourceMapIncludeSources: false,
+               mangle: true,
+               compress: true,
+               beautify: false,
             },
          },
       },
